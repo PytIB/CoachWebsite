@@ -1,0 +1,17 @@
+<div class="coach-card">
+    <a href="/lesson-book">
+    <img [src]="imageUrl" alt="avatar" width="200" height="200">
+    </a>
+    <h3>{{ titleAndName }}</h3>
+    <a class="peakRating"  [href]="fidePeakRatingLink" target="_blank">Fide Peak Rating</a>
+    <ul>
+        <li *ngFor="let success of successes">{{ success }}</li>
+    </ul>
+    <p>{{ rate }}$/Hour</p>
+    <a class="bookBtn" [routerLink]="['/bookalesson', transformTitle(titleAndName)]" (click)=" bookaLesson()">Book a lesson</a><br>
+
+
+
+
+    <a class="aboutBtn" [href]="aboutLessonsLink">About the lessons</a>
+</div>

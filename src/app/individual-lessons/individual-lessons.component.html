@@ -1,0 +1,12 @@
+<div class="individual-lessons">
+    <div *ngFor="let coach of coachData">
+        <app-coach-card
+        [imageUrl]="coach.img"
+        [titleAndName]="coach.name"
+        [fidePeakRatingLink]="coach.peakRating"
+        [successes]="coach.success"
+        [rate]="coach.rate"
+      ></app-coach-card>
+      </div>
+      
+</div>

@@ -1,0 +1,40 @@
+<!-- signup.component.html -->
+
+<div class="signup-container">
+    <h2>Sign Up</h2>
+    <form (ngSubmit)="onSignUpSubmit()" #signupForm="ngForm">
+      <div class="form-group">
+
+        <label for="username">username</label>
+        <input ngModel type="text" id="userId" name="userId"  required> <br>
+
+        <label for="firstName">First Name:</label>
+        <input ngModel type="text" id="firstName" name="firstName"  required><br>
+      
+        
+      
+        <label for="lastName">Last Name:</label>
+        <input ngModel type="text" id="lastName" name="lastName"  required><br>
+      
+     
+        <label for="email">Email:</label>
+        <input ngModel type="email" id="email" name="email"  required email><br>
+   
+  
+        <label for="password">Password:</label>
+        <input ngModel type="password" id="password" name="password" required minlength="6" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$" (ngModelChange)="checkPasswords()">
+        <small class="text-muted">Password must contain at least one letter, one number, and be at least 6 characters long.</small>
+        <br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input ngModel type="password" id="confirmPassword" name="confirmPassword" required minlength="6" (ngModelChange)="checkPasswords()">
+        <small *ngIf="passwordsMatch === false" class="text-danger">Passwords do not match.</small>
+        <br>
+      
+
+      </div>
+  
+      <button type="submit" [disabled]="signupForm.invalid || passwordsMatch === false" class="btn btn-success">Register</button>
+    </form>
+  </div>
+  

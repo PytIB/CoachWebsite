@@ -1,0 +1,52 @@
+
+.coach-card {
+    display: block;
+    padding: 50px 25px 25px 25px;
+    width: 400px;
+    margin-bottom: 20px;
+    border: 5px solid transparent;
+    box-shadow: 0px 16px 35px 0px rgba(0, 0, 2, 0.08);
+    transition: 0.5s;
+   
+    text-align: center;
+    
+  
+    
+    margin-bottom: 100px; /* Vertical margin */
+    margin-right: 30px; /* Horizontal margin */
+}
+.peakRating{
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #0056b3;
+   
+    margin-top: 15px;
+}
+.peakRating:hover{
+    background-color: #0056b3 ;
+}
+
+p{
+    font-size: 16px;
+    font-family:sans-serif;
+}
+.bookBtn{
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #0677D6;
+    color: #fff;
+    margin-top: 15px;
+}
+.aboutBtn{
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #191E3B;
+    color: #fff;
+    margin-top: 15px;
+}
+.coach-card:hover {
+    border-color:  #191E3B;
+  }

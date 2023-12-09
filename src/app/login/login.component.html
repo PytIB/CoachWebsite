@@ -1,0 +1,23 @@
+<!-- login.component.html -->
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="onLoginSubmit()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input ngModel name="userId" type="text" class="form-control" id="name" required>
+        <label for="username">Password:</label>
+        <input ngModel name="password" type="text" class="form-control" id="password" required>
+        <button type="Log In" class="btn btn-success">Login</button>
+        
+      </div>
+  
+  
+     
+    </form>
+  
+    <div class="signup-link">
+      <p>Don't have an account? <a routerLink="/signup">Sign Up</a></p>
+    </div>
+  </div>
+  

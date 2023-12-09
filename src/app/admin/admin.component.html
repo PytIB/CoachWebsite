@@ -1,0 +1,36 @@
+<div class="admin-menu">
+    <button (click)="addCoach()"> Add Coach </button>
+    <button> Remove Coach</button>
+    <button> Schedules </button>
+</div>
+
+
+
+<div *ngIf="add_Coach" class="container">
+    <h1> Add new coach </h1>
+    <form (ngSubmit)="onSubmit()" #CoachForm="ngForm">
+        <div class="form-group">
+            <label for="name">Coach Name and Title</label><br>
+            <input ngModel name="name" type="text" class="form-control" id="name" required>
+            
+     
+            <label for="img">Image Url</label>
+            <input ngModel name="img" type="url" class="form-control" id="img" required>
+            <label for="Fide">Official Fide Profile Link</label>
+            <input ngModel name="peakRating" #Fide="ngModel" type="url" class="form-control" id="Fide" required>
+            <label for="newAchievement">New Achievement:</label> <br>
+            <input ngModel name="success" id="newAchievement" type="text"  class="form-control" required/> <br>
+            
+            <label for="rate">Rate</label> <br>
+            <input ngModel name="rate" type="number" class="form-control" id="amount" required><br>
+            
+            
+            <button type="submit" class="btn btn-success">Submit </button>
+            
+        </div>
+
+
+    </form>
+
+
+</div>
